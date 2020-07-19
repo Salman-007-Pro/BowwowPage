@@ -1,0 +1,17 @@
+{
+  "name": "bowwow-homepage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "materialize-css": "^1.0.0",
+    "node-sass": "^4.14.1"
+  }
+}
