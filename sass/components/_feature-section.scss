@@ -1,0 +1,110 @@
+@import "./../abstracts/variables";
+.feature-section {
+  height: fit-content;
+  background-image: url("/img/bg-img.jpg");
+  //   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .feature-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .feature-heading-box {
+      display: flex;
+      flex-direction: column;
+      text-transform: capitalize;
+      justify-content: center;
+      align-items: center;
+      margin-top: 8rem;
+      color: white;
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        font-family: $heading-font-family;
+      }
+      h1 {
+        font-size: 5rem;
+        font-family: $heading-secondary-font-family;
+      }
+    }
+    .feature-box-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-top: 5rem;
+      width: 80%;
+      height: 100%;
+      flex-wrap: wrap;
+      .feature-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        margin-top: 2rem;
+        &:not(:last-child) {
+          margin-left: 0.5rem;
+        }
+        &-img {
+          width: 30rem;
+          height: 30rem;
+          background-color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 3rem;
+          img {
+            margin-top: 0.5rem;
+            object-fit: contain;
+          }
+        }
+        &-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          h2 {
+            margin-top: 3rem;
+            text-transform: capitalize;
+            font-family: $paragraph-font-family;
+            font-size: 3rem;
+          }
+          img {
+            margin: 2.5rem 0;
+            object-fit: contain;
+          }
+          p {
+            font-size: 3rem;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+    .feature-arrow-box {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      height: 5rem;
+      margin-bottom: 1rem;
+      .line {
+        border-left: 2px solid white;
+        width: 1px;
+        height: 100%;
+        margin: 0 3rem;
+      }
+      i:nth-child(1) {
+        color: #b19f8e;
+      }
+      i {
+        display: inline-block;
+        font-size: 7rem;
+        color: white;
+      }
+    }
+  }
+}

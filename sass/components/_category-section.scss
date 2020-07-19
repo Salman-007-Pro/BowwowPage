@@ -1,0 +1,86 @@
+@import "./../abstracts/variables";
+.category-section {
+  height: fit-content;
+  .category-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .category-heading-box {
+      display: flex;
+      flex-direction: column;
+      text-transform: capitalize;
+      justify-content: center;
+      align-items: center;
+      margin-top: 8rem;
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        font-family: $heading-font-family;
+      }
+      h1 {
+        font-size: 5rem;
+        font-family: $heading-secondary-font-family;
+      }
+    }
+    .category-box-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-top: 8rem;
+      width: 80%;
+      height: 100%;
+      flex-wrap: wrap;
+      .category-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        width: 17rem;
+        height: 16rem;
+        border-radius: 1rem;
+        box-shadow: 2px 5px 7px 2px #ccc;
+        margin-top: 2rem;
+        &:not(:last-child) {
+          margin-left: 0.5rem;
+        }
+        img {
+          margin-top: 0.5rem;
+          object-fit: contain;
+        }
+        h2 {
+          margin-top: 3rem;
+          text-transform: capitalize;
+          color: $color-primary;
+          font-family: $paragraph-font-family;
+          font-size: 3rem;
+        }
+      }
+    }
+    .category-arrow-box {
+      margin-top: 8rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      height: 5rem;
+      margin-bottom: 6rem;
+      .line {
+        border-left: 2px solid $color-primary;
+        width: 1px;
+        height: 100%;
+        margin: 0 3rem;
+      }
+      i:nth-child(1) {
+        color: #b19f8e;
+      }
+      i {
+        display: inline-block;
+        font-size: 7rem;
+        color: $color-primary;
+      }
+    }
+  }
+}
