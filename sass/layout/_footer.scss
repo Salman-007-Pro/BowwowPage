@@ -1,0 +1,183 @@
+@import "./../abstracts/variables";
+.footer {
+  border-top: 1px solid black;
+  height: fit-content;
+  padding: 8rem;
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .footer-main-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 80%;
+      .footer-logo-details-wrapper {
+        flex: 1.5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 1rem;
+        img {
+          width: 10rem;
+          object-fit: contain;
+        }
+        p {
+          margin-top: 1rem;
+          font-size: 1.5rem;
+          width: 77%;
+          font-weight: 700;
+          font-family: $customer-font-family;
+        }
+        .footer-input {
+          background-color: $color-primary;
+          border-radius: 10rem;
+          width: 90%;
+          margin-top: 2rem;
+          display: flex;
+          align-items: center;
+          input {
+            border: none;
+            background-color: transparent;
+            color: white;
+            padding: 0 2.5rem;
+            flex: 9;
+            height: 5rem;
+            font-size: 1.8rem;
+            &:focus,
+            &:active {
+              outline: none;
+              border: none;
+            }
+            &::placeholder {
+              font-weight: 700;
+              font-family: $customer-font-family;
+              color: $color-placeholder;
+            }
+          }
+          button {
+            flex: 1;
+            background-color: transparent;
+            color: white;
+            font-size: 2rem;
+            border: none;
+            margin-right: 1rem;
+            &:focus,
+            &:active {
+              outline: none;
+              border: none;
+            }
+            i {
+              background-color: $color-primary;
+            }
+          }
+        }
+      }
+      .footer-legal-wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+        margin-bottom: 1rem;
+        h1 {
+          text-transform: capitalize;
+          color: $color-primary;
+          font-size: 2.5rem;
+          font-weight: 700;
+          border-bottom: 2px solid $color-primary;
+          font-family: $customer-font-family;
+          padding: 0.5rem 0;
+        }
+        p {
+          font-size: 1.7rem;
+          margin-top: 1.5rem;
+          font-weight: 500;
+          font-family: $customer-font-family;
+          text-transform: capitalize;
+        }
+      }
+      .footer-uselink-wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+        margin-bottom: 1rem;
+        h1 {
+          text-transform: capitalize;
+          color: $color-primary;
+          font-size: 2.5rem;
+          font-weight: 700;
+          border-bottom: 2px solid $color-primary;
+          font-family: $customer-font-family;
+          padding: 0.5rem 0;
+        }
+        p {
+          font-size: 1.7rem;
+          margin-top: 1.5rem;
+          font-weight: 500;
+          font-family: $customer-font-family;
+          text-transform: capitalize;
+        }
+      }
+      .footer-contact-wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+        margin-bottom: 1rem;
+        h1 {
+          text-transform: capitalize;
+          color: $color-primary;
+          font-size: 2.5rem;
+          font-weight: 700;
+          border-bottom: 2px solid $color-primary;
+          font-family: $customer-font-family;
+          padding: 0.5rem 0;
+        }
+        .icon-text {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          i {
+            font-size: 1.7rem;
+            color: $color-primary;
+            margin-right: 1rem;
+            margin-top: 1.5rem;
+          }
+          p {
+            font-size: 1.7rem;
+            margin-top: 1.5rem;
+            font-weight: 500;
+            text-align: justify;
+            font-family: $customer-font-family;
+            text-transform: capitalize;
+          }
+        }
+      }
+      @media screen and (max-width: 1250px) {
+        .footer-logo-details-wrapper {
+          .footer-input {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .footer-reserved {
+      font-size: 1.6rem;
+      font-weight: 700;
+      font-family: $customer-font-family;
+      color: $color-primary;
+      margin-top: 2.5rem;
+      margin-bottom: -6rem;
+    }
+  }
+}

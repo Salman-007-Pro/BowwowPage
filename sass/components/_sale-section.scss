@@ -1,0 +1,209 @@
+@import "./../abstracts/variables";
+.sale-section {
+  height: fit-content;
+  .sale-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5.5rem 2.5rem;
+    margin-bottom: 2rem;
+    .pet-product-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      .pet-product-box-1 {
+        flex: 2;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        background-image: url("/img/bg-img1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 2.5rem;
+        border-radius: 3rem;
+        margin-bottom: 2rem;
+        .pet-product-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          font-family: $shop-font-family;
+          text-transform: uppercase;
+          h4 {
+            color: $color-shop;
+            font-size: 1.8rem;
+            font-weight: 700;
+          }
+          h2 {
+            font-weight: 700;
+            font-size: 7rem;
+            letter-spacing: 3px;
+          }
+          .sale-box {
+            display: flex;
+            flex-direction: row;
+            h1 {
+              color: $color-shop;
+              font-size: 10rem;
+              font-weight: 700;
+              letter-spacing: 3px;
+            }
+            .box {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              font-family: $shop-font-family;
+              width: 12rem;
+              height: 12rem;
+              margin-left: 3rem;
+              border-radius: 100%;
+              box-shadow: 0 3px 6px 1px #ccc;
+              background-color: white;
+              h3 {
+                font-size: 2rem;
+                text-transform: uppercase;
+                font-weight: bolder;
+              }
+              h2 {
+                color: $color-shop;
+                font-size: 3rem;
+                font-weight: 700;
+                margin: 0;
+              }
+              h4 {
+                text-transform: lowercase;
+                font-size: 3rem;
+                color: black;
+                margin: 0;
+              }
+            }
+          }
+        }
+        img {
+          object-fit: contain;
+        }
+      }
+      .pet-product-box-2 {
+        margin-left: 3rem;
+        height: 37rem;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      @media screen and (max-width: 914px) {
+        .pet-product-box-1 {
+          flex-wrap: wrap;
+        }
+        .pet-product-box-2 {
+          margin: 0;
+        }
+      }
+    }
+    .dog-box-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      margin-top: 5rem;
+      .dog-box-setting {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 80%;
+        .dog-box-1 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-family: $dog-font-family;
+          width: 40rem;
+          height: 40rem;
+          border-radius: 100%;
+          background-image: url("/img/bg-img1.jpg");
+          background-position: center;
+          background-size: cover;
+          box-shadow: -1px 3px 5px 1px #ccc;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 5%;
+            left: -5%;
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            border: 4px solid $color-primary;
+            z-index: -1;
+          }
+          h1 {
+            text-transform: capitalize;
+            font-size: 3rem;
+            color: $color-primary;
+            font-weight: 300;
+            margin-bottom: 4rem;
+          }
+          img {
+            width: 11rem;
+            height: auto;
+            object-fit: contain;
+          }
+        }
+        .dog-box-2 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-family: $dog-font-family;
+          width: 40rem;
+          height: 40rem;
+          border-radius: 100%;
+          background-image: url("/img/bg-img1.jpg");
+          background-position: center;
+          background-size: cover;
+          box-shadow: -1px 3px 5px 1px #ccc;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 5%;
+            left: -5%;
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            border: 4px solid $color-primary;
+            z-index: -1;
+          }
+          h1 {
+            text-transform: capitalize;
+            font-size: 3rem;
+            color: $color-primary;
+            font-weight: 300;
+            margin-bottom: 5rem;
+          }
+          img {
+            width: 30rem;
+            height: auto;
+            object-fit: contain;
+          }
+        }
+
+        @media screen and (max-width: 854px) {
+          .dog-box-1 {
+            margin-bottom: 5rem;
+          }
+        }
+      }
+      @media screen and (max-width: 1130px) {
+        .dog-box-setting {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

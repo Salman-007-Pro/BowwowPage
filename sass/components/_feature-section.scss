@@ -2,9 +2,9 @@
 .feature-section {
   height: fit-content;
   background-image: url("/img/bg-img.jpg");
-  //   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 8rem;
   .feature-wrapper {
     display: flex;
     flex-direction: column;
@@ -16,7 +16,6 @@
       text-transform: capitalize;
       justify-content: center;
       align-items: center;
-      margin-top: 8rem;
       color: white;
       h2 {
         font-size: 2.5rem;
@@ -33,7 +32,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-evenly;
-      margin-top: 5rem;
+      margin-top: 3rem;
       width: 80%;
       height: 100%;
       flex-wrap: wrap;
@@ -84,13 +83,11 @@
       }
     }
     .feature-arrow-box {
-      margin-top: 2rem;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
       height: 5rem;
-      margin-bottom: 1rem;
       .line {
         border-left: 2px solid white;
         width: 1px;
