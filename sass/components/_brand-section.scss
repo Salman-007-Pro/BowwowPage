@@ -1,0 +1,53 @@
+@import "./../abstracts/variables";
+.brand-section {
+  height: fit-content;
+  background-color: $color-bg;
+  padding: 8rem;
+  .brand-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .brand-heading-box {
+      display: flex;
+      flex-direction: column;
+      text-transform: capitalize;
+      justify-content: center;
+      align-items: center;
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        font-family: $heading-font-family;
+      }
+      h1 {
+        font-size: 5rem;
+        font-family: $heading-secondary-font-family;
+      }
+    }
+    .brand-box-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: space-between;
+      justify-content: space-between;
+      margin-top: 4rem;
+      width: 65%;
+      height: 100%;
+      flex-wrap: wrap;
+      .brand-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 20rem;
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        img {
+          margin-top: 1rem;
+          width: 18rem;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
