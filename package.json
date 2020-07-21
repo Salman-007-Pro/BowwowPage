@@ -13,7 +13,6 @@
   "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^9.8.5",
-    "materialize-css": "^1.0.0",
     "node-sass": "^4.14.1",
     "postcss-cli": "^7.1.1"
   }
