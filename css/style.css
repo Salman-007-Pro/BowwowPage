@@ -434,7 +434,7 @@ html {
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-around;
       margin-top: 4rem;
       width: 75%;
       height: 100%;
@@ -444,7 +444,7 @@ html {
       .blog-section .blog-wrapper .blog-box-wrapper .blog-box {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
         max-width: 42rem;
         margin-bottom: 2rem; }
         .blog-section .blog-wrapper .blog-box-wrapper .blog-box img {
