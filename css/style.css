@@ -102,7 +102,7 @@ html {
 
 .feature-section {
   height: fit-content;
-  background-image: url("./img/bg-img.jpg");
+  background-image: url("./../../img/bg-img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 8rem; }
@@ -208,7 +208,7 @@ html {
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
-        background-image: url("./img/bg-img1.jpg");
+        background-image: url("./../../img/bg-img1.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         padding: 2.5rem;
@@ -298,7 +298,7 @@ html {
           width: 40rem;
           height: 40rem;
           border-radius: 100%;
-          background-image: url("./img/bg-img1.jpg");
+          background-image: url("./../../img/bg-img1.jpg");
           background-position: center;
           background-size: cover;
           box-shadow: -1px 3px 5px 1px #ccc;
@@ -332,7 +332,7 @@ html {
           width: 40rem;
           height: 40rem;
           border-radius: 100%;
-          background-image: url("./img/bg-img1.jpg");
+          background-image: url("./../../img/bg-img1.jpg");
           background-position: center;
           background-size: cover;
           box-shadow: -1px 3px 5px 1px #ccc;
