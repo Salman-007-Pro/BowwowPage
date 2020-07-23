@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
@@ -42,29 +42,33 @@
   </head>
   <body>
     <header class="header">
-      <nav class="nav-header">
+      <nav class="nav-header-wrapper">
         <div class="row margin-zero">
-          <div class="col s1 offset-s1 m1 offset-m1 l1 offset-l1 padding-zero">
-            <div class="logo-wrapper">
-              <img src="./img/icon.png" alt="app-logo" />
+          <div class="nav-header">
+            <div
+              class="col s1 offset-s1 m1 offset-m1 l1 offset-l1 padding-zero"
+            >
+              <div class="logo-wrapper">
+                <img src="./img/icon.png" alt="app-logo" />
+              </div>
             </div>
-          </div>
-          <div class="col s3 offset-s4 m4 offset-m3 l3 offset-l4 padding-zero">
-            <div class="nav-item-wrapper">
-              <div class="nav-item active">home</div>
-              <div class="nav-item">shop</div>
-              <div class="nav-item">blog</div>
-              <div class="nav-item">about</div>
-              <div class="nav-item">contact</div>
+            <div
+              class="col s3 offset-s4 m4 offset-m3 l3 offset-l4 padding-zero"
+            >
+              <div class="nav-item-wrapper">
+                <div class="nav-item active">home</div>
+                <div class="nav-item">shop</div>
+                <div class="nav-item">blog</div>
+                <div class="nav-item">about</div>
+                <div class="nav-item">contact</div>
+              </div>
             </div>
-          </div>
-          <div class="col s1 offset-s1 m2 offset-m1 l1 offset-l1 padding-zero">
-            <div class="nav-other-item-wrapper">
-              <img src="./img/10.png" alt="search" class="nav-other-item" />
-              <img src="./img/8.png" alt="search" class="nav-other-item" />
-              <img src="./img/9.png" alt="search" class="nav-other-item" />
-            </div>
-            <div class="line-small-screen-wrapper">
+            <div class="col s3 m2 offset-m1 l1 offset-l1 padding-zero">
+              <div class="nav-other-item-wrapper">
+                <img src="./img/10.png" alt="search" class="nav-other-item" />
+                <img src="./img/8.png" alt="search" class="nav-other-item" />
+                <img src="./img/9.png" alt="search" class="nav-other-item" />
+              </div>
               <div class="line-small-screen">
                 <span>&nbsp;</span>
                 <span>&nbsp;</span>
@@ -274,7 +278,7 @@
           <h1>from our blogs</h1>
         </div>
         <div class="blog-box-wrapper">
-          <div class="blog-box">
+          <!-- <div class="blog-box">
             <img src="./img/image1.jpg" alt="customer-reviews" />
             <h1>train your dogs</h1>
             <p>
@@ -300,6 +304,46 @@
               lunging at ...
             </p>
             <h2>Full Article <i class="fas fa-angle-right"></i></h2>
+          </div> -->
+
+          <div class="slider">
+            <ul class="slides">
+              <li>
+                <div class="blog-boxes">
+                  <div class="blog-box">
+                    <img src="./img/image2.jpg" alt="customer-reviews" />
+                    <h1>Care of your dogs</h1>
+                    <p>
+                      Is your dog easily distracted? Does he spend your entire
+                      walk lunging at ...
+                    </p>
+                    <h2>Full Article <i class="fas fa-angle-right"></i></h2>
+                  </div>
+                </div>
+              </li>
+              <!-- <li>
+                <img
+                  src="https://static.pexels.com/photos/471/nature-flowers-plant-blur-medium.jpg"
+                />
+                <div class="caption left-align">
+                  <h3>Left Aligned Caption</h3>
+                  <h5 class="light grey-text text-lighten-3">
+                    Here's our small slogan.
+                  </h5>
+                </div>
+              </li>
+              <li>
+                <img
+                  src="https://static.pexels.com/photos/6695/summer-sun-yellow-spring-medium.jpg"
+                />
+                <div class="caption right-align">
+                  <h3>Right Aligned Caption</h3>
+                  <h5 class="light grey-text text-lighten-3">
+                    Here's our small slogan.
+                  </h5>
+                </div>
+              </li> -->
+            </ul>
           </div>
         </div>
         <div class="blog-dots-wrapper">
@@ -388,4 +432,19 @@
       </div>
     </footer>
   </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.js"
+    integrity="sha512-1lagjLfnC1I0iqH9plHYIUq3vDMfjhZsLy9elfK89RBcpcRcx4l+kRJBSnHh2Mh6kLxRHoObD1M5UTUbgFy6nA=="
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+    integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q=="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $(document).ready(function () {
+      $(".slider").slider();
+    });
+  </script>
 </html>
