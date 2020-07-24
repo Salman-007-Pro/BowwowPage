@@ -5,6 +5,12 @@
 [1200-1800] is where our normal styles apply
 1800px+: big desktop
 */
+@keyframes fadeIn {
+  from {
+    opacity: 0.3; }
+  to {
+    opacity: 1; } }
+
 *,
 *::after,
 *::before {
@@ -13,7 +19,8 @@
   box-sizing: border-box; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
   @media screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
@@ -343,8 +350,7 @@ html {
           background-position: center;
           background-size: cover;
           box-shadow: -1px 3px 5px 1px #ccc;
-          position: relative;
-          border: 1px solid red; }
+          position: relative; }
           .sale-section .sale-wrapper .dog-box-wrapper .dog-box-setting .dog-box-1::after {
             content: "";
             position: absolute;
@@ -366,7 +372,6 @@ html {
             height: auto;
             object-fit: contain; }
         .sale-section .sale-wrapper .dog-box-wrapper .dog-box-setting .dog-box-2 {
-          border: 1px solid red;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -496,46 +501,52 @@ html {
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: center;
       margin-top: 4rem;
-      width: 75%;
-      height: fit-content; }
-      .blog-section .blog-wrapper .blog-box-wrapper .slider .slides li .blog-boxes {
-        display: flex;
+      max-width: 1366px;
+      position: relative; }
+      .blog-section .blog-wrapper .blog-box-wrapper .slide {
+        display: none;
         flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        height: fit-content;
+        flex-wrap: wrap;
         width: 100%;
         height: 100%;
-        flex-wrap: wrap;
-        margin-left: auto;
-        margin-right: auto; }
-        .blog-section .blog-wrapper .blog-box-wrapper .slider .slides li .blog-boxes .blog-box {
+        position: relative;
+        transition: all 0.2s;
+        animation: fadeIn 2s linear; }
+        .blog-section .blog-wrapper .blog-box-wrapper .slide .blog-box {
           display: flex;
           flex-direction: column;
-          max-width: 42rem;
-          margin-bottom: 2rem;
-          border: 1px solid blue; }
-          .blog-section .blog-wrapper .blog-box-wrapper .slider .slides li .blog-boxes .blog-box img {
-            max-width: 42rem;
-            height: 100%;
-            background-size: 100%;
-            background-repeat: no-repeat; }
-          .blog-section .blog-wrapper .blog-box-wrapper .slider .slides li .blog-boxes .blog-box h1 {
+          justify-content: space-around;
+          max-width: 40rem;
+          margin-bottom: 2rem; }
+          .blog-section .blog-wrapper .blog-box-wrapper .slide .blog-box img {
+            border-radius: 2.5rem;
+            max-width: 38rem;
+            height: auto;
+            object-fit: contain; }
+          .blog-section .blog-wrapper .blog-box-wrapper .slide .blog-box h1 {
             font-size: 2.5rem;
             font-family: "Mulish", sans-serif;
             text-transform: capitalize;
             margin-top: 2.2rem; }
-          .blog-section .blog-wrapper .blog-box-wrapper .slider .slides li .blog-boxes .blog-box p {
+          .blog-section .blog-wrapper .blog-box-wrapper .slide .blog-box p {
             font-size: 2rem;
             font-weight: 200;
             font-family: "Marvel", sans-serif;
             margin-top: 2.5rem;
             width: 75%;
             letter-spacing: 1px; }
-          .blog-section .blog-wrapper .blog-box-wrapper .slider .slides li .blog-boxes .blog-box h2 {
-            font-size: 1.8rem;
+          .blog-section .blog-wrapper .blog-box-wrapper .slide .blog-box h2 {
+            font-size: 1.6rem;
             font-family: "Mulish", sans-serif;
             color: #653f1c;
             margin-top: 1rem; }
+      @media screen and (max-width: 37.5em) {
+        .blog-section .blog-wrapper .blog-box-wrapper {
+          width: 100%; } }
     .blog-section .blog-wrapper .blog-dots-wrapper {
       display: flex;
       flex-direction: row;
@@ -548,9 +559,20 @@ html {
         width: 1.8rem;
         height: 1.8rem;
         border: 3px solid #653f1c;
-        border-radius: 100%; }
-      .blog-section .blog-wrapper .blog-dots-wrapper .active {
+        border-radius: 100%;
+        transition: all 0.2s; }
+      .blog-section .blog-wrapper .blog-dots-wrapper .active,
+      .blog-section .blog-wrapper .blog-dots-wrapper .blog-dot:hover {
         background-color: #653f1c; }
+      @media screen and (max-width: 75em) {
+        .blog-section .blog-wrapper .blog-dots-wrapper {
+          width: 20%; } }
+      @media screen and (max-width: 52.25em) {
+        .blog-section .blog-wrapper .blog-dots-wrapper {
+          width: 30%; } }
+      @media screen and (max-width: 37.5em) {
+        .blog-section .blog-wrapper .blog-dots-wrapper {
+          width: 50%; } }
     .blog-section .blog-wrapper .blog-contact-wrapper {
       display: flex;
       flex-direction: row;
@@ -589,69 +611,6 @@ html {
       @media screen and (max-width: 52.25em) {
         .blog-section .blog-wrapper .blog-contact-wrapper {
           width: 100%; } }
-    @media screen and (max-width: 1284px) {
-      .blog-section .blog-wrapper .blog-box-wrapper {
-        justify-content: center; }
-      .blog-section .blog-wrapper .blog-dots-wrapper {
-        width: 40%; } }
-
-.slider {
-  position: relative;
-  width: 100%;
-  height: 500rem;
-  border: 1px solid red; }
-  .slider.fullscreen {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; }
-    .slider.fullscreen ul.slides {
-      height: 100%; }
-    .slider.fullscreen ul.indicators {
-      z-index: 2;
-      bottom: 30px; }
-  .slider .slides {
-    display: flex;
-    background-color: white;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    border: 1px solid blue; }
-    .slider .slides li {
-      border: 1px solid green;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      z-index: 1;
-      width: 100%;
-      height: 100%; }
-      .slider .slides li.active {
-        z-index: 2; }
-  .slider .indicators {
-    position: absolute;
-    text-align: center;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0; }
-    .slider .indicators .indicator-item {
-      display: inline-block;
-      position: relative;
-      cursor: pointer;
-      height: 16px;
-      width: 16px;
-      margin: 0 12px;
-      background-color: white;
-      border: 3px solid #653f1c;
-      transition: background-color 0.3s;
-      border-radius: 50%; }
-      .slider .indicators .indicator-item.active {
-        background-color: #653f1c; }
 
 .header {
   height: fit-content; }
@@ -895,7 +854,13 @@ html {
           width: 100%; } }
       @media screen and (max-width: 52.25em) {
         .footer .footer-wrapper .footer-main-wrapper {
-          width: 100%; } }
+          width: 100%; }
+          .footer .footer-wrapper .footer-main-wrapper .footer-logo-details-wrapper,
+          .footer .footer-wrapper .footer-main-wrapper .footer-legal-wrapper,
+          .footer .footer-wrapper .footer-main-wrapper .footer-uselink-wrapper,
+          .footer .footer-wrapper .footer-main-wrapper .footer-contact-wrapper {
+            flex: none;
+            width: 50%; } }
       @media screen and (max-width: 37.5em) {
         .footer .footer-wrapper .footer-main-wrapper .footer-logo-details-wrapper,
         .footer .footer-wrapper .footer-main-wrapper .footer-legal-wrapper,

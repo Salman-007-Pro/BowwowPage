@@ -165,7 +165,6 @@
           background-size: cover;
           box-shadow: -1px 3px 5px 1px #ccc;
           position: relative;
-          border: 1px solid red;
           &::after {
             content: "";
             position: absolute;
@@ -191,7 +190,6 @@
           }
         }
         .dog-box-2 {
-          border: 1px solid red;
           display: flex;
           flex-direction: column;
           justify-content: center;
